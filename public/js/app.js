@@ -41,10 +41,6 @@ function verificarAutenticacao() {
   }
 }
 
-function mostrarLogin() {
-  mostrarLoginModal();
-}
-
 function logout() {
   token = null;
   localStorage.removeItem('token');
@@ -52,7 +48,6 @@ function logout() {
   location.reload();
 }
 
-window.logout = logout;
 
 // Funções de Membros
 function carregarMembros() {
