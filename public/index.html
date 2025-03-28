@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Membros - Igreja</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Membros</h1>
+    <div id="login-status">
+      <button id="btn-login">Login</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="secao-cadastro" class="hidden">
+      <h2>Novo Membro</h2>
+      <form id="form-cadastro">
+        <div class="form-group">
+          <label for="nome">Nome Completo*</label>
+          <input type="text" id="nome" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data-nascimento">Data Nascimento</label>
+            <input type="date" id="data-nascimento">
+          </div>
+          
+          <div class="form-group">
+            <label for="data-batismo">Data Batismo</label>
+            <input type="date" id="data-batismo">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+        </div>
+
+        <div class="form-group">
+          <label for="endereco">Endereço</label>
+          <textarea id="endereco" rows="3"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Salvar</button>
+          <button type="button" id="btn-cancelar" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="secao-lista">
+      <div class="section-header">
+        <h2>Lista de Membros</h2>
+        <button id="btn-novo" class="btn-primary">+ Novo Membro</button>
+      </div>
+      
+      <div class="search-box">
+        <input type="text" id="busca" placeholder="Buscar membros...">
+        <button id="btn-buscar">Buscar</button>
+      </div>
+
+      <div class="table-container">
+        <table id="tabela-membros">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Email</th>
+              <th>Data Batismo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+            <!-- Dados serão carregados via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
