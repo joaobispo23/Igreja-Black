@@ -1,2 +1,2 @@
-\Sistema de Menbros da igreja 
+Sistema de Menbros da igreja 
 
